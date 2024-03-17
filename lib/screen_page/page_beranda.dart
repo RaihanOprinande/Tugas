@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:projects/screen_page/Page_list.dart';
 import 'package:projects/screen_page/Page_navigation_bar.dart';
 import 'package:projects/screen_page/page_bottom_navigation.dart';
+import 'package:projects/screen_page/page_search_list.dart';
 
 class PageBeranda extends StatelessWidget {
   const PageBeranda({super.key});
@@ -126,6 +128,21 @@ class PageBeranda extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 12
+                  ),
+                ),
+                color: Colors.green,
+                textColor: Colors.white,
+              ),
+              SizedBox(height: 5,),
+              MaterialButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)
+                =>PageListUsers()
+                ));
+              },
+                child: Text('List User',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12
                   ),
                 ),
                 color: Colors.green,

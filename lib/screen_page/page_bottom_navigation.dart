@@ -3,6 +3,7 @@ import 'package:projects/screen_page/page_column.dart';
 import 'package:projects/screen_page/page_custom_grid.dart';
 import 'package:projects/screen_page/page_form_register.dart';
 import 'package:projects/screen_page/page_passing_data.dart';
+import 'package:projects/screen_page/page_search_list.dart';
 
 class PageBottomNavigationBar extends StatefulWidget {
   const PageBottomNavigationBar({super.key});
@@ -32,7 +33,7 @@ class _PageBottomNavigationBarState extends State<PageBottomNavigationBar>
 
           FormRegister(),
           CustomeGrid(),
-          PageColumnRow()
+          PageSearchList()
 
         ],
       ),

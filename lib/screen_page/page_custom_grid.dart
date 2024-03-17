@@ -105,7 +105,7 @@ class _CustomeGridState extends State<CustomeGrid> {
                         children: [
                           Text(
                             "${listMovie[index]["judul"]}",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16),
                           ),

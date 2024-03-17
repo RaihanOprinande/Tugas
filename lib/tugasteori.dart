@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:projects/ManajemenInformatika.dart';
 import 'package:projects/Tekom.dart';
 
@@ -24,16 +23,16 @@ class homepage extends StatelessWidget {
               height: 100,
               width: 100,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            Text('Selamat datang di Politeknik Negeri Padang',
+            const Text('Selamat datang di Politeknik Negeri Padang',
               style: TextStyle(
                 color: Colors.orange,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text('Limau Manis, Padang, Sumbar',
+            const Text('Limau Manis, Padang, Sumbar',
             style: TextStyle(
               fontWeight: FontWeight.bold
             ),
@@ -43,20 +42,20 @@ class homepage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>MIPage() ));
+                          builder: (context) =>const MIPage() ));
                 },
-              child: Text(
+              color: Colors.orange,
+              textColor: Colors.white,
+              child: const Text(
                 'Manajemen Informatika',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,fontSize: 12),
                 ),
-              color: Colors.orange,
-              textColor: Colors.white,
 
 
 
               ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
 
@@ -65,15 +64,15 @@ class homepage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>tekom() ));
+                        builder: (context) =>const tekom() ));
               },
-              child: Text(
+              color: Colors.orange,
+              textColor: Colors.white,
+              child: const Text(
                 'Teknik Komputer',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,fontSize: 12),
               ),
-              color: Colors.orange,
-              textColor: Colors.white,
 
             ),
 

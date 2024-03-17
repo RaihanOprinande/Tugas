@@ -10,7 +10,7 @@ class PageNavigationBar extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Text('Page Navigation Bar'),
+        title: const Text('Page Navigation Bar'),
       ),
 
       //drawer untuk menu samping
@@ -19,7 +19,7 @@ class PageNavigationBar extends StatelessWidget {
         child: Drawer(
           child: ListView(
             children: [
-              UserAccountsDrawerHeader(
+              const UserAccountsDrawerHeader(
                 accountName: Text('Wope'),
                 accountEmail: Text('Wope.com'),
                 currentAccountPicture: CircleAvatar(
@@ -35,59 +35,59 @@ class PageNavigationBar extends StatelessWidget {
                 //untuk di klik
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PageRow()));
+                      MaterialPageRoute(builder: (context) => const PageRow()));
                 },
-                title: Text(
+                title: const Text(
                     "Row Widget"
                 ),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PageColumn()));
+                      MaterialPageRoute(builder: (context) => const PageColumn()));
                 },
-                title: Text(
+                title: const Text(
                     "Column Widget"
                 ),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PageColumnRow()));
+                      MaterialPageRoute(builder: (context) => const PageColumnRow()));
                 },
-                title: Text(
+                title: const Text(
                     "Row & Column"
                 ),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PageListHorizontal()));
+                      MaterialPageRoute(builder: (context) => const PageListHorizontal()));
                 },
-                title: Text(
+                title: const Text(
                     "List Horizontal"
                 ),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PagePassingData()));
+                      MaterialPageRoute(builder: (context) => const PagePassingData()));
                 },
-                title: Text(
+                title: const Text(
                     "Passing Data"
                 ),
               ),
-              Divider(),
+              const Divider(),
               ListTile(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PageLoginState()  ));
+                      MaterialPageRoute(builder: (context) => const PageLoginState()  ));
                 },
-                title: Text(
+                title: const Text(
                     "Log in"
                 ),
               ),
@@ -101,7 +101,7 @@ class PageNavigationBar extends StatelessWidget {
           onPressed: (){
             Navigator.pop(context);
           },
-          child: Text('Back'),
+          child: const Text('Back'),
         ),
       ),
     );
@@ -114,7 +114,7 @@ class PageRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       // appBar: AppBar(
       //   backgroundColor: Colors.orange,
       //   title: Text('Page Row'),

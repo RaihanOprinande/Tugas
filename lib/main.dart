@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:projects/screen_page/page_beranda.dart';
-import 'package:projects/screen_page/page_passing_data.dart';
-import 'package:projects/tugasteori.dart';
 
 void main() {
   runApp(const MyApp());

@@ -8,7 +8,7 @@ class MIPage extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Text(
+        title: const Text(
           'Manajemen Informatika',
           style: TextStyle(
             color: Colors.white,
@@ -16,16 +16,16 @@ class MIPage extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 20,),//mengasih jarak
-            Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            const SizedBox(height: 20,),//mengasih jarak
+            const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
                 'Deskripsi dan Profil',
                 style: TextStyle(
@@ -34,10 +34,10 @@ class MIPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 20.0),
+            const SizedBox(height: 20),
+            const Padding(padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Padding(
-              padding: const EdgeInsets.all(8.0), //tambah margin
+              padding: EdgeInsets.all(8.0), //tambah margin
               child: Text(
                   'Program Studi Manajemen Informatika (Kampus Kab.'
                   'Pelalawan) merupakan salah satu Program Studi Diluar'
@@ -58,15 +58,15 @@ class MIPage extends StatelessWidget {
               ),
             ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Center(
               child: MaterialButton(
                 onPressed: (){
                   Navigator.pop(context);
                 },
-                child: Text('back'),
                 color: Colors.orange,
                 textColor: Colors.white,
+                child: const Text('back'),
               ),
             )
           ],

@@ -7,7 +7,7 @@ class PageColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Page Column'),
+          title: const Text('Page Column'),
           backgroundColor: Colors.orange,
         ),
         body: Column(
@@ -40,10 +40,10 @@ class PageColumnRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page Column & Row'),
+        title: const Text('Page Column & Row'),
         backgroundColor: Colors.orange,
       ),
-      body: Center(
+      body: const Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -91,7 +91,7 @@ class PageListHorizontal extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('List Horizontal'),
+        title: const Text('List Horizontal'),
       ),
       body: SizedBox(
         height: 200,
@@ -99,7 +99,7 @@ class PageListHorizontal extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           children: List.generate(50, (index) {
             return Card(
-              child: Center(child: Text('Horizontal ke : ${index}')),
+              child: Center(child: Text('Horizontal ke : $index')),
             );
           }),
         ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class DetailGrid extends StatelessWidget {
   final Map<String, dynamic> movieDetails;
 
-  const DetailGrid(this.movieDetails, {Key? key}) : super(key: key);
+  const DetailGrid(this.movieDetails, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class DetailGrid extends StatelessWidget {
         title: Text(movieDetails["judul"]),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -22,18 +22,18 @@ class DetailGrid extends StatelessWidget {
                 width: 200,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Center(
               child: Text(
                 "Judul: ${movieDetails["judul"]}",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Center(
               child: Text(
                 "Harga: Rp. ${movieDetails["harga"]}",
-                style: TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16),
               ),
             ),
           ],

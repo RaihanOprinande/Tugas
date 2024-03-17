@@ -57,18 +57,18 @@ class _PageListUsersState extends State<PageListUsers> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('list Users Api'),
+        title: const Text('list Users Api'),
       ),
       body: ListView.builder(
           itemCount: listUser.length,
           itemBuilder: (context, index){
             return Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
             
             child: ListTile(
               title: Text(
                 listUser[index].name ?? "",
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.deepOrange,
                   fontWeight: FontWeight.bold,
                   fontSize: 18

@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -17,8 +16,8 @@ class PagePassingData extends StatelessWidget {
           itemBuilder: (context, index){
             return Card(
               child: ListTile(
-                title: Text('Judul Berita ke ${index}'),
-                subtitle: Text('Ini sub judul berita ke ${index}'),
+                title: Text('Judul Berita ke $index'),
+                subtitle: Text('Ini sub judul berita ke $index'),
                 onTap: (){
                   //ke page detail
                   Navigator.push(context, MaterialPageRoute(builder: (context) => PageGetData(index)));
@@ -42,13 +41,13 @@ class PageGetData extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('Paage Get Data'),
+        title: const Text('Paage Get Data'),
       ),
       body: Center(
         child: Column(
           children: [
-            Text('Ini adalah judul berita ke ${index}'),
-            Text('Ini adalah sub judul berita ke ${index}'),
+            Text('Ini adalah judul berita ke $index'),
+            Text('Ini adalah sub judul berita ke $index'),
           ],
         ),
       ),
@@ -81,7 +80,7 @@ class PageLoginStateState extends State<PageLoginState> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.cyan,
-        title: Text('page Login'),
+        title: const Text('page Login'),
       ),
       body: Center(
         child: Column(
@@ -95,7 +94,7 @@ class PageLoginStateState extends State<PageLoginState> {
                 )
               ),
             ),
-            SizedBox(height: 8,),
+            const SizedBox(height: 8,),
             TextFormField(
     controller: txtPassword,
     obscureText: true,
@@ -106,7 +105,7 @@ class PageLoginStateState extends State<PageLoginState> {
             ),
           ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             MaterialButton(onPressed: (){
               setState(() {
                 String username = txtUsername.text;
@@ -115,7 +114,7 @@ class PageLoginStateState extends State<PageLoginState> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AdminPage(),
+                      builder: (context) => const AdminPage(),
                     ),
                   );
 
@@ -127,9 +126,9 @@ class PageLoginStateState extends State<PageLoginState> {
 
 
             },
-              child: Text('login'),
               color: Colors.green,
               textColor: Colors.white,
+              child: const Text('login'),
             )
           ],
         ),
@@ -141,13 +140,15 @@ class PageLoginStateState extends State<PageLoginState> {
 
 
 class AdminPage extends StatelessWidget {
+  const AdminPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
 
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'Hello, Selamat Datang Admin'
         ),

@@ -3,6 +3,7 @@ import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:projects/screen_page/Page_list.dart';
 import 'package:projects/screen_page/Page_navigation_bar.dart';
 import 'package:projects/screen_page/page_bottom_navigation.dart';
+import 'package:projects/screen_page/page_list_berita.dart';
 
 class PageBeranda extends StatelessWidget {
   const PageBeranda({super.key});
@@ -140,6 +141,21 @@ class PageBeranda extends StatelessWidget {
                 color: Colors.green,
                 textColor: Colors.white,
                 child: const Text('List User',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12
+                  ),
+                ),
+              ),
+              const SizedBox(height: 5,),
+              MaterialButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)
+                =>const PageListBerita()
+                ));
+              },
+                color: Colors.green,
+                textColor: Colors.white,
+                child: const Text('List Berita',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 12

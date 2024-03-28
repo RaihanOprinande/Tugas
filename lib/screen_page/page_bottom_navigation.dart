@@ -7,35 +7,27 @@ class PageBottomNavigationBar extends StatefulWidget {
   const PageBottomNavigationBar({super.key});
 
   @override
-  State<PageBottomNavigationBar> createState() => _PageBottomNavigationBarState();
+  State<PageBottomNavigationBar> createState() =>
+      _PageBottomNavigationBarState();
 }
 
 class _PageBottomNavigationBarState extends State<PageBottomNavigationBar>
     with SingleTickerProviderStateMixin {
-
   TabController? tabController;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     tabController = TabController(length: 3, vsync: this);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
       body: TabBarView(
         controller: tabController,
-        children: const [
-
-          FormRegister(),
-          CustomeGrid(),
-          PageSearchList()
-
-        ],
+        children: const [PageFormRegister(), CustomeGrid(), PageSearchList()],
       ),
-
       bottomNavigationBar: BottomAppBar(
         child: TabBar(
           isScrollable: true,
